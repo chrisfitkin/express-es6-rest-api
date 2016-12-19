@@ -1,5 +1,5 @@
 // our example model is an Array of objects
-const facets = [
+const posts = [
   {
     id: 'g95etya0720',
     message: 'Life doesn\'t give us purpose. We give life purpose.',
@@ -26,4 +26,4 @@ const facets = [
     author: 'Batman'
   }
 ]
-export default facets;
+export default posts;
