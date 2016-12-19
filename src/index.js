@@ -6,6 +6,8 @@ import initializeDb from './db';
 import middleware from './middleware';
 import api from './api';
 import config from './config.json';
+import { version } from '../package.json';
+
 
 let app = express();
 app.server = http.createServer(app);
@@ -22,11 +24,13 @@ app.use(bodyParser.json({
 // connect to db
 initializeDb( db => {
 
+	let major = version.split('.')[0];
+
 	// internal middleware
 	app.use(middleware({ config, db }));
 
 	// api router
-	app.use('/api', api({ config, db }));
+	app.use(`/api/v${major}`, api({ config, db }));
 
 	app.server.listen(process.env.PORT || config.port);
 
