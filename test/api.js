@@ -11,7 +11,7 @@ import { version } from '../package.json'
 
 describe('API', () => {
   describe('GET /api/v0', () => {
-    it('should return API version on api GET', (done) => {
+    it('should return API version', (done) => {
       chai.request(app.server)
         .get('/api/v0')
         .end((err, res) => {

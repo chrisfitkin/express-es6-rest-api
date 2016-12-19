@@ -9,13 +9,14 @@ chai.use(chaiHttp)
 
 import posts from '../src/models/posts'
 
+const route = '/api/v0/posts'
 let newPost = {}
 
 describe('Posts', () => {
-  describe('GET /posts', () => {
+  describe(`GET ${route}`, () => {
     it('should list ALL posts', (done) => {
       chai.request(app.server)
-        .get('/api/v0/posts')
+        .get(route)
         .end((err, res) => {
           expect(res.status).to.equal(200)
           expect(res).to.be.json
@@ -26,7 +27,7 @@ describe('Posts', () => {
     })
   })
 
-  describe('POST /posts', () => {
+  describe(`POST ${route}`, () => {
     it('should return 201 with Header Location URI for the new post', (done) => {
       const post = {
         message: 'With great power comes great responsibility.',
@@ -34,7 +35,7 @@ describe('Posts', () => {
       }
 
       chai.request(app.server)
-        .post(`/api/v0/posts`)
+        .post(route)
         .send(post)
         .end((err, res) => {
           expect(res.status).to.equal(201)
@@ -46,7 +47,7 @@ describe('Posts', () => {
     })
   })
 
-  describe('GET /posts/:id', () => {
+  describe(`GET ${route}/:id`, () => {
     it('should list ONE post', (done) => {
       const post = {
         id: 'g95etya0720',
@@ -55,7 +56,7 @@ describe('Posts', () => {
       }
 
       chai.request(app.server)
-        .get(`/api/v0/posts/${post.id}`)
+        .get(`${route}/${post.id}`)
         .end((err, res) => {
           expect(res.status).to.equal(200)
           expect(res).to.be.json
@@ -72,7 +73,7 @@ describe('Posts', () => {
       const body = 'Not found'
 
       chai.request(app.server)
-        .get(`/api/v0/posts/${post.id}`)
+        .get(`${route}/${post.id}`)
         .end((err, res) => {
           expect(res.status).to.equal(404)
           expect(res).to.be.an('object')
@@ -83,7 +84,7 @@ describe('Posts', () => {
     })
   })
 
-  describe('PUT /posts/:id', () => {
+  describe(`PUT ${route}/:id`, () => {
     it('should return an updated post', (done) => {
       const post = {
         id: newPost.id,
@@ -91,7 +92,7 @@ describe('Posts', () => {
       }
       
       chai.request(app.server)
-        .put(`/api/v0/posts/${post.id}`)
+        .put(`${route}/${post.id}`)
         .send(post)
         .end((err, res) => {
           expect(res.status).to.equal(200)
@@ -103,14 +104,14 @@ describe('Posts', () => {
     })
   })
 
-  describe('DELETE /posts/:id', () => {
+  describe(`DELETE ${route}/:id`, () => {
     it('should return 204 No Content', (done) => {
       const post = {
         id: newPost.id,
       }
       
       chai.request(app.server)
-        .delete(`/api/v0/posts/${post.id}`)
+        .delete(`${route}/${post.id}`)
         .end((err, res) => {
           expect(res.status).to.equal(204)
           done()

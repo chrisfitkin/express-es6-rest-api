@@ -17,6 +17,7 @@ export default ({ config, db }) => resource({
 
 	/** GET / - List all entities */
 	index({ params }, res) {
+		// TODO: implement posts.filter for req.query properties (e.g. author='') 
 		res.json(posts);
 	},
 
