@@ -3,7 +3,7 @@ Express & ES6 REST API Boilerplate
 
 TODO
 ---------------
-- Complete Tests
+- Complete Initial Tests (/)
 - Update Readme: posts, tests, fork
 - Update Readme: sample requests, postsman, curl
 - REST best practices: 201, location (http://gaboesquivel.com/blog/2015/best-practices-for-designing-web-apis/)
@@ -14,6 +14,7 @@ TODO
 - Formatted errors
 - Add test for author search
 - Move db to importable/global resource
+- Heroku deployment
 
 This is a straightforward boilerplate for building REST APIs with ES6 and Express.
 
