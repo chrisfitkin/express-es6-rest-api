@@ -1,29 +1,16 @@
-Express & ES6 REST API Boilerplate
+NodeJS RESTful API Boilerplate
 ==================================
 
-TODO
----------------
-- Complete Initial Tests (/)
-- Update Readme: posts, tests, fork
-- Update Readme: sample requests, postsman, curl
-- REST best practices: 201, location (http://gaboesquivel.com/blog/2015/best-practices-for-designing-web-apis/)
-- Create subroute
-- return Links for parent
-- implement search with querystring at get :id
-- uuid.v4() for all ids (facets + POST)
-- Formatted errors
-- Add test for author search
-- Move db to importable/global resource
-- Heroku deployment
 
-This is a straightforward boilerplate for building REST APIs with ES6 and Express.
+This is a boilerplate for building RESTful APIs with NodeJS.
 
 - ES6 support via [babel](https://babeljs.io)
 - REST resources as middleware via [resource-router-middleware](https://github.com/developit/resource-router-middleware)
 - CORS support via [cors](https://github.com/troygoode/node-cors)
 - Body Parsing via [body-parser](https://github.com/expressjs/body-parser)
-
-> Tip: If you are using [Mongoose](https://github.com/Automattic/mongoose), you can automatically expose your Models as REST resources using [restful-mongoose](https://git.io/restful-mongoose).
+- Testing via [Mocha](https://github.com/mochajs/mocha)
+- Follows RESTful API [best practices](http://gaboesquivel.com/blog/2015/best-practices-for-designing-web-apis/) from [@GaboEsquivel](http://gaboesquivel.com/about/)
+- _TODO:_ JWT Authentication inspired by [Chris Sevilleja](https://pub.scotch.io/@chris) at [scotch.io](https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens)
 
 Getting Started
 ---------------
@@ -46,6 +33,43 @@ PORT=8080 npm run dev
 PORT=8080 npm start
 ```
 
+Roadmap
+-------
+- :black_small_square: Add version information to endpoint path /api/v0/
+- :black_small_square: Change example endpoint to /posts
+- :black_small_square: Add sample data for /posts
+- :black_small_square: Create Mocha tests for example endpoint
+- :black_small_square: Respond with 201 and Location header for successful POST requests
+
+- :white_small_square: Add test to build step in packages.json
+- :white_small_square: Rename project to nodejs-rest-api-boilerplate
+- :white_small_square: Update README for example Posts endpoint - /docs/example
+- :white_small_square: Update README for tests - /docs/tests
+- :white_small_square: Create POSTman README - /docs/postman
+- :white_small_square: Create cURLS README - /docs/curl
+- :white_small_square: Add Docker support with Nginx and SSL
+- :white_small_square: Implement JWT authentication <https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens>
+- :white_small_square: Add example code for searching with parameters at GET endpoint
+- :white_small_square: Update REAMDE with best practices reference <http://gaboesquivel.com/blog/2015/best-practices-for-designing-web-apis/>
+- :white_small_square: Create /authors example endpoint
+    - :white_small_square: Update README
+    - :white_small_square: Create test
+- :white_small_square: Create subroute example - /authors/:id/posts
+    - :white_small_square: Update README
+    - :white_small_square: Create test
+- :white_small_square: Return Links with GET /authors endpoint to related posts in res.Links[0...n].href
+- :white_small_square: Standardize format of error responses with JSON and meaningful messages
+- :white_small_square: Add params/querystring based logic to example - /posts?author=Superman
+    - :white_small_square: Update README
+    - :white_small_square: Create test
+- :white_small_square: Provide inline API documentation with examples <http://apidocjs.com/>
+- :white_small_square: Implement uuid.v4() for ids in sample data and POST logic
+- :white_small_square: Move db to importable/global resource for access from /models directory
+- :white_small_square: Provide Heroku deployment example
+
+Forked
+------
+This project was forked from <https://github.com/developit/express-es6-rest-api>.
 
 License
 -------
