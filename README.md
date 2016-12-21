@@ -35,37 +35,37 @@ PORT=8080 npm start
 
 Roadmap
 -------
-- :black_small_square: Add version information to endpoint path /api/v0/
-- :black_small_square: Change example endpoint to /posts
-- :black_small_square: Add sample data for /posts
-- :black_small_square: Create Mocha tests for example endpoint
-- :black_small_square: Respond with 201 and Location header for successful POST requests
-
-- :white_small_square: Add test to build step in packages.json
-- :white_small_square: Rename project to nodejs-rest-api-boilerplate
-- :white_small_square: Update README for example Posts endpoint - /docs/example
-- :white_small_square: Update README for tests - /docs/tests
-- :white_small_square: Create POSTman README - /docs/postman
-- :white_small_square: Create cURLS README - /docs/curl
-- :white_small_square: Add Docker support with Nginx and SSL
-- :white_small_square: Implement JWT authentication <https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens>
-- :white_small_square: Add example code for searching with parameters at GET endpoint
-- :white_small_square: Update REAMDE with best practices reference <http://gaboesquivel.com/blog/2015/best-practices-for-designing-web-apis/>
-- :white_small_square: Create /authors example endpoint
-    - :white_small_square: Update README
-    - :white_small_square: Create test
-- :white_small_square: Create subroute example - /authors/:id/posts
-    - :white_small_square: Update README
-    - :white_small_square: Create test
-- :white_small_square: Return Links with GET /authors endpoint to related posts in res.Links[0...n].href
-- :white_small_square: Standardize format of error responses with JSON and meaningful messages
-- :white_small_square: Add params/querystring based logic to example - /posts?author=Superman
-    - :white_small_square: Update README
-    - :white_small_square: Create test
-- :white_small_square: Provide inline API documentation with examples <http://apidocjs.com/>
-- :white_small_square: Implement uuid.v4() for ids in sample data and POST logic
-- :white_small_square: Move db to importable/global resource for access from /models directory
-- :white_small_square: Provide Heroku deployment example
+- :white_check_mark: Add version information to endpoint path /api/v0/
+- :white_check_mark: Change example endpoint to /posts
+- :white_check_mark: Add sample data for /posts
+- :white_check_mark: Create Mocha tests for example endpoint
+- :white_check_mark: Respond with 201 and Location header for successful POST requests
+- :white_medium_square: Add folder structure to README
+- :white_medium_square: Add test to build step in packages.json
+- :white_medium_square: Rename project to nodejs-rest-api-boilerplate
+- :white_medium_square: Update README for example Posts endpoint - /docs/example
+- :white_medium_square: Update README for tests - /docs/tests
+- :white_medium_square: Create POSTman README - /docs/postman
+- :white_medium_square: Create cURLS README - /docs/curl
+- :white_medium_square: Add Docker support with Nginx and SSL
+- :white_medium_square: Implement JWT authentication <https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens>
+- :white_medium_square: Add example code for searching with parameters at GET endpoint
+- :white_medium_square: Update REAMDE with best practices reference <http://gaboesquivel.com/blog/2015/best-practices-for-designing-web-apis/>
+- :white_medium_square: Create /authors example endpoint
+    - :white_medium_square: Update README
+    - :white_medium_square: Create test
+- :white_medium_square: Create subroute example - /authors/:id/posts
+    - :white_medium_square: Update README
+    - :white_medium_square: Create test
+- :white_medium_square: Return Links with GET /authors endpoint to related posts in res.Links[0...n].href
+- :white_medium_square: Standardize format of error responses with JSON and meaningful messages
+- :white_medium_square: Add params/querystring based logic to example - /posts?author=Superman
+    - :white_medium_square: Update README
+    - :white_medium_square: Create test
+- :white_medium_square: Provide inline API documentation with examples <http://apidocjs.com/>
+- :white_medium_square: Implement uuid.v4() for ids in sample data and POST logic
+- :white_medium_square: Move db to importable/global resource for access from /models directory
+- :white_medium_square: Provide Heroku deployment example
 
 Forked
 ------
